@@ -1,0 +1,34 @@
+<div class="m-3">
+  <% if(messages.success){ %>
+    <div class="alert alert-success">
+      <%= messages.success %>
+    </div>
+    <% } %>
+<a href="/api/teacher/addStudent" class="btn btn-primary mt-3">Add Student</a>
+<a href="/" class="btn btn-dark mt-3">Logout</a>
+<table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">RollNo</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date of birth</th>
+        <th scope="col">Score</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% students.forEach(student=> { %>
+      <tr>
+        <th><%= student.rollno %></th>
+        <td><%= student.name %></td>
+        <td><%= student.dob %></td>
+        <td><%= student.score %></td>
+        <td>
+            <a href="/api/teacher/updateStudent/<%= student._id %>" class="btn btn-warning">Edit</a>
+            <a href="/api/teacher/deleteStudent/<%= student._id %>" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+      <%}) %>
+    </tbody>
+  </table>
+</div>

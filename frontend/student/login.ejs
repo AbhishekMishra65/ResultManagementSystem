@@ -1,0 +1,21 @@
+<div class="p-4">
+  <% if(messages.error){ %>
+    <div class="alert alert-danger">
+      <%= messages.error %>
+    </div>
+    <% } %>
+      <h3>Student Login</h3>
+
+      <form method="POST" class="mt-3">
+        <div class="mb-3 col-6">
+          <label for="exampleInputPassword1" class="form-label">Roll no</label>
+          <input type="number" name="rollno" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 col-6">
+          <label for="exampleInputPassword1" class="form-label">Date of Birth</label>
+          <input type="date" name="dob" class="form-control" id="exampleInputPassword1">
+        </div>
+        <a><button type="submit" class="btn btn-success">Submit</button></a>
+        <a href="/" class="btn btn-primary">Back</a>
+      </form>
+</div>

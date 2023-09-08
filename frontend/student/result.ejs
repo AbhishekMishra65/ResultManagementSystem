@@ -1,0 +1,30 @@
+<h3 class="mt-3 ms-4">Hi <%= student.name %>, Here is Your Result</h3>
+<a href="/" class="btn btn-dark mt-2 ms-4">Logout</a>
+<div class="mt-4 p-4">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">RollNo</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <%= student.rollno %>
+                </td>
+                <td>
+                    <%= student.name %>
+                </td>
+                <td>
+                    <%= student.dob %>
+                </td>
+                <td>
+                    <%= student.score %>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
